@@ -184,24 +184,7 @@ npm run build
 npm start
 ```
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📞 Contact
-
-- **Email**: hello@nextpixel.studio
-- **Telegram**: @nextpixel
-- **GitHub**: github.com/nextpixel
-- **Behance**: behance.net/nextpixel
-
 ---
 
 Made with ☕ coffee and 💻 code by NextPixel
+
