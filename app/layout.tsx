@@ -7,7 +7,7 @@ import { LoadingProvider } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'NextPixel - Custom Web Development Studio',
+  title: 'NextPixel',
   description: 'We create websites that inspire and perform. Custom web solutions combining creativity and technology.',
 }
 
