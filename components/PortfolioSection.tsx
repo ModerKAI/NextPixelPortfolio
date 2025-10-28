@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     title: 'NightHold',
-    description: 'Modern Lending website for a crypto-curses with custom animations and CMS integration.',
+    description: 'Modern Lending website for a crypto-courses with custom animations and CMS integration.',
     image: '/images/projects/corporate.png',
     category: 'Landing',
     tags: ['React', 'Next.js', 'Tailwind'],
