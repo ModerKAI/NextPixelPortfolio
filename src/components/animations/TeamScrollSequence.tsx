@@ -84,10 +84,10 @@ export default function TeamScrollSequence({ members }: TeamScrollSequenceProps)
 						ref={(el) => {
 							panelsRef.current[i] = el;
 						}}
-						className="h-[100dvh] w-full relative overflow-hidden flex items-center justify-center"
+						className="h-dvh w-full relative overflow-hidden flex items-center justify-center"
 					>
 						<div className="absolute inset-0 opacity-10 pointer-events-none">
-							<div className={`absolute top-0 ${isEven ? "left-0" : "right-0"} w-1/2 h-full bg-gradient-to-b from-gray-800 to-black`} />
+							<div className={`absolute top-0 ${isEven ? "left-0" : "right-0"} w-1/2 h-full bg-linear-to-b from-gray-800 to-black`} />
 						</div>
 
 						<div className={`container mx-auto px-6 flex flex-col md:flex-row h-full items-center justify-center gap-8 ${isEven ? "md:flex-row-reverse" : ""}`}>

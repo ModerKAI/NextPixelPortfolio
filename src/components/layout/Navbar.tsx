@@ -35,7 +35,7 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
 				</nav>
 
 				<div
-					className={`fixed top-[60px] left-0 w-full z-50 bg-white border-b-4 border-black transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
+					className={`fixed top-15 left-0 w-full z-50 bg-white border-b-4 border-black transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-75 opacity-100" : "max-h-0 opacity-0"
 						}`}
 				>
 					<div className="flex flex-col divide-y-[3px] divide-black">

@@ -27,7 +27,7 @@ export default function HeroSection() {
 
 			<p
 				ref={taglineRef}
-				className="text-2xl font-medium leading-tight tracking-tight max-w-[80%]"
+				className="text-2xl font-medium leading-tight tracking-tight max-w-4/5"
 			>
 				CRAFTING DIGITAL{" "}
 				<span className="text-primary underline">BRUTALISM</span> FOR THE ELITE

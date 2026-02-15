@@ -81,8 +81,8 @@ export default function WorksProjectList({ filter = "works" }: WorksProjectListP
 						</h3>
 					</div>
 
-					<div className="max-h-[500px] md:max-h-0 md:group-hover:max-h-[500px] transition-all duration-500 ease-in-out overflow-hidden px-6 pb-6">
-						<div className="w-full aspect-[4/5] border-brutal overflow-hidden bg-black relative">
+					<div className="max-h-125 md:max-h-0 md:group-hover:max-h-125 transition-all duration-500 ease-in-out overflow-hidden px-6 pb-6">
+						<div className="w-full aspect-4/5 border-brutal overflow-hidden bg-black relative">
 							<Image
 								src={project.image}
 								alt={project.alt}

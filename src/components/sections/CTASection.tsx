@@ -10,7 +10,7 @@ export default function CTASection() {
 
 			<TransitionLink
 				href="/inquiry"
-				className="group relative flex items-center gap-4 bg-background-light border-brutal p-2 rounded-full toggle-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all duration-75"
+				className="group relative flex items-center gap-4 bg-background-light border-brutal p-2 rounded-full toggle-shadow hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all duration-75"
 			>
 				<span className="pl-6 pr-2 font-bold uppercase tracking-widest text-sm">
 					Project Inquiry

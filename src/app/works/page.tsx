@@ -19,7 +19,7 @@ export default function WorksPage() {
 				</div>
 
 				<WorksProjectList filter="works" />
-				<div className="h-[3px] bg-black" />
+				<div className="h-0.75 bg-black" />
 			</main>
 			<Footer />
 			<ContactBar variant="works" />

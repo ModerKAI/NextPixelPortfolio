@@ -22,7 +22,7 @@ export default function CaseStudyHero({
 				<br />
 				<span className="text-primary italic">{titleAccent}</span>
 			</h1>
-			<div className="relative w-full aspect-[16/9] brutal-border-all overflow-hidden bg-zinc-200">
+			<div className="relative w-full aspect-video brutal-border-all overflow-hidden bg-zinc-200">
 				{video ? (
 					<video
 						src={video}

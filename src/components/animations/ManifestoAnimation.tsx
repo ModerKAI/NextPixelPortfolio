@@ -69,7 +69,7 @@ export default function ManifestoAnimation() {
 						}}
 						className={`flex ${i % 2 === 0 ? "justify-start" : "justify-end"}`}
 					>
-						<div className="border-l-4 border-primary pl-6 py-2 max-w-[80%]">
+						<div className="border-l-4 border-primary pl-6 py-2 max-w-4/5">
 							<p className="text-[clamp(3rem,8vw,6rem)] font-condensed font-black uppercase leading-[0.9]">
 								{text}
 							</p>

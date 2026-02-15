@@ -14,7 +14,7 @@ export default function CaseStudyContent() {
 					required a platform that didn&apos;t just display information, but
 					lived it.
 				</p>
-				<div className="brutal-border-all p-2 mb-16 relative aspect-[16/9]">
+				<div className="brutal-border-all p-2 mb-16 relative aspect-video">
 					<Image
 						src="/nighthold2.jpg"
 						alt="UI Detail shot"
@@ -48,7 +48,7 @@ export default function CaseStudyContent() {
 								fill
 								className="object-cover"
 							/>
-							<div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+							<div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
 								<span className="text-3xl font-bold block">60FPS</span>
 								<span className="text-[10px] uppercase opacity-50 tracking-widest">
 									Performance
@@ -62,7 +62,7 @@ export default function CaseStudyContent() {
 								fill
 								className="object-cover"
 							/>
-							<div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+							<div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
 								<span className="text-3xl font-bold block">0.4s</span>
 								<span className="text-[10px] uppercase opacity-50 tracking-widest">
 									Load Speed

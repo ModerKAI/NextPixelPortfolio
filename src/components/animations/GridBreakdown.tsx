@@ -72,7 +72,7 @@ export default function GridBreakdown({ imageSrc, alt }: GridBreakdownProps) {
 
 	return (
 		<div ref={wrapperRef} className="relative w-full">
-			<div ref={containerRef} className="relative w-full aspect-square md:aspect-[4/3]">
+			<div ref={containerRef} className="relative w-full aspect-square md:aspect-4/3">
 				{/* eslint-disable-next-line @next/next/no-img-element */}
 				<img src={imageSrc} alt={alt} className="sr-only" />
 

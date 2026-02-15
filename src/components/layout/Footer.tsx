@@ -8,7 +8,7 @@ export default function Footer() {
 					Next Generation Digital.
 				</h2>
 				<div className="flex flex-col gap-4">
-					<p className="text-sm font-bold max-w-[200px]">
+					<p className="text-sm font-bold max-w-50">
 						WE BUILD WHAT OTHERS FEAR TO IMAGINE.
 					</p>
 					<div className="flex gap-4">

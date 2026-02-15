@@ -41,7 +41,7 @@ export default function DiagonalSlice({ imageSrc, alt }: DiagonalSliceProps) {
 	}, []);
 
 	return (
-		<div ref={wrapperRef} className="relative w-full aspect-[16/9] bg-black shadow-[8px_8px_0px_#000]">
+		<div ref={wrapperRef} className="relative w-full aspect-video bg-black shadow-[8px_8px_0px_#000]">
 			<div
 				ref={imageRef}
 				className="absolute inset-0"

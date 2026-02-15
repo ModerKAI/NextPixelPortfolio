@@ -68,7 +68,7 @@ export default function StudioPage() {
 						Studio Core.
 					</h2>
 					<div className="flex flex-col gap-4">
-						<p className="text-sm font-bold max-w-[200px] leading-snug uppercase">
+						<p className="text-sm font-bold max-w-50 leading-snug uppercase">
 							Join the elite circle of digital architects.
 						</p>
 						<div className="flex gap-4">

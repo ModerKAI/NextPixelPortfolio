@@ -34,7 +34,7 @@ export default function ContactBar({ variant = "home" }: ContactBarProps) {
 				<div className="flex flex-col gap-2">
 					<TransitionLink
 						href="/inquiry"
-						className="bg-white border-brutal p-4 rounded-full flex items-center justify-center toggle-shadow active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+						className="bg-white border-brutal p-4 rounded-full flex items-center justify-center toggle-shadow active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
 					>
 						<span className="material-icons font-bold">mail</span>
 					</TransitionLink>
