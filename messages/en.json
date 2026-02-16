@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "title": "NextPixel | Neo-Brutalist Digital Agency",
+    "description": "Crafting digital brutalism for the elite brands of the future.",
+    "studioTitle": "NextPixel | Studio",
+    "studioDescription": "We architect digital excellence. NextPixel is a boutique digital architecture studio."
+  },
+  "nav": {
+    "works": "Works",
+    "studio": "Studio",
+    "team": "Team",
+    "close": "Close"
+  },
+  "hero": {
+    "title1": "Creative",
+    "title2": "Agency",
+    "tagline": "CRAFTING DIGITAL",
+    "taglineHighlight": "BRUTALISM",
+    "taglineSuffix": "FOR THE ELITE BRANDS OF THE FUTURE."
+  },
+  "studio": {
+    "aboutLabel": "About Studio",
+    "heading1": "We build",
+    "headingHighlight": "digital",
+    "heading2": "experiences.",
+    "description1": "NextPixel is a young studio building next-generation websites. We combine cutting-edge technologies with minimalist design, turning every project into a digital work of art.",
+    "description2": "From complex web applications built with React and Next.js to rapid solutions on no-code platforms — we find the optimal approach for every client. Our goal is not just to create a website, but to build a digital product that drives your business forward.",
+    "service1Title": "Web Development",
+    "service1Desc": "Building websites of any complexity — from landing pages to large-scale web applications. We use Next.js, React, and cutting-edge technologies.",
+    "service2Title": "No-Code Solutions",
+    "service2Desc": "Rapid project launches on no-code platforms. Perfect for MVPs and startups looking to hit the market as fast as possible.",
+    "service3Title": "Web Design",
+    "service3Desc": "UI/UX design that stands out. We create visually powerful interfaces focused on user experience and conversion.",
+    "partners": "Partners",
+    "satisfaction": "Satisfaction",
+    "support": "Support"
+  },
+  "projects": {
+    "featuredProjects": "Featured Projects"
+  },
+  "cta": {
+    "heading1": "Ready to",
+    "heading2": "Break Patterns?",
+    "button": "Project Inquiry"
+  },
+  "footer": {
+    "heading": "Next Generation Digital.",
+    "tagline": "WE BUILD WHAT OTHERS FEAR TO IMAGINE."
+  },
+  "contact": {
+    "contact": "Contact"
+  },
+  "team": {
+    "title1": "THE",
+    "title2": "ARCHITECTS",
+    "joinTitle1": "JOIN THE",
+    "joinTitle2": "REVOLUTION",
+    "seekingTalent": "Always seeking elite talent",
+    "careersButton": "Careers",
+    "polinaRole": "Design Lead",
+    "polinaDesc": "Architecting the unseen. Building the impossible. Mastery over design.",
+    "arturRole": "Coder / Co-CEO",
+    "arturDesc": "Architecting the unseen. Building the impossible. Mastery over code.",
+    "mishaRole": "Salesman / Co-CEO",
+    "mishaDesc": "Driving growth and forging partnerships. Turning vision into business reality."
+  },
+  "studioPage": {
+    "heading1": "We Architect",
+    "heading2": "Digital",
+    "heading3": "Excellence",
+    "description": "NextPixel is a boutique digital architecture studio. We dismantle mediocrity to rebuild high-performance digital ecosystems that command attention and drive conversion.",
+    "service1": "Web Design",
+    "service2": "AI Automation",
+    "service3": "Web Dev",
+    "footerHeading": "Studio Core.",
+    "footerText": "Join the elite circle of digital architects.",
+    "hireButton": "Hire Studio"
+  },
+  "works": {
+    "latest": "Latest",
+    "worksYear": "Works '26"
+  },
+  "careers": {
+    "title1": "JOIN THE",
+    "title2": "SYNDICATE",
+    "nameLabel": "Name",
+    "namePlaceholder": "IDENTITY STRING",
+    "emailLabel": "Email",
+    "emailPlaceholder": "COMMS@PROTOCOL.NET",
+    "disciplineLabel": "Discipline",
+    "portfolioLabel": "Portfolio Link",
+    "portfolioPlaceholder": "HTTPS://SURFACE.INDEX",
+    "fileLabel": "File Attachment",
+    "dropText": "Drop CV / Portfolio PDF",
+    "maxSize": "MAX_SIZE: 25MB",
+    "submitButton": "Transmit Application",
+    "submitting": "Transmitting...",
+    "successTitle": "TRANSMITTED",
+    "successMessage": "Application received. We'll be in touch.",
+    "sendAnother": "Send Another",
+    "statusLabel": "Status",
+    "statusText": "Awaiting Uplink",
+    "securityNote": "Encrypted transmission protocol active. By transmitting, you agree to our data processing architecture.",
+    "errorMin2": "Minimum 2 characters",
+    "errorEmail": "Invalid email format",
+    "errorUrl": "Must start with http:// or https://",
+    "errorGeneric": "Something went wrong",
+    "errorNetwork": "Network error. Try again.",
+    "design": "Design",
+    "engineering": "Engineering",
+    "motion": "Motion",
+    "strategy": "Strategy"
+  },
+  "inquiry": {
+    "title1": "Start a",
+    "title2": "Project",
+    "descriptionLabel": "Project Description",
+    "descriptionPlaceholder": "TELL US ABOUT YOUR VISION...",
+    "descriptionError": "Please describe your project (min 10 chars)",
+    "typeLabel": "Project Type",
+    "budgetLabel": "Budget Range ($)",
+    "submitButton": "Send Inquiry",
+    "submitting": "Sending...",
+    "successTitle": "RECEIVED",
+    "successMessage": "We'll review your inquiry and get back to you.",
+    "sendAnother": "Send Another",
+    "directContact": "Direct Contact",
+    "teamAvailable": "Team Available for Q4",
+    "errorGeneric": "Something went wrong",
+    "errorNetwork": "Network error. Try again.",
+    "landing": "Landing",
+    "ecommerce": "E-Commerce",
+    "webDesign": "Web Design",
+    "customIdea": "Custom Idea"
+  },
+  "caseStudy": {
+    "visitSite": "Visit Site",
+    "notFound": "Project not found",
+    "clientLabel": "Client",
+    "servicesLabel": "Services",
+    "yearLabel": "Year",
+    "nextProject": "Next Project",
+    "copyright": "© 2026 NEXTPIXEL™",
+    "contentHeading": "REDEFINING DIGITAL",
+    "contentHighlight": "LIQUIDITY",
+    "contentSuffix": "THROUGH GENERATIVE MOTION.",
+    "contentDescription": "We built a dynamic ecosystem where data informs aesthetic. Lumina Tech required a platform that didn't just display information, but lived it.",
+    "technicalLabel": "Technical Insight",
+    "technicalHeading": "Real-time rendering.",
+    "technicalDescription": "Utilizing Three.js and custom GLSL shaders, we achieved a fluid interface that reacts to user scroll velocity and cursor proximity.",
+    "performance": "Performance",
+    "loadSpeed": "Load Speed",
+    "systemArchitecture": "SYSTEM ARCHITECTURE"
+  },
+  "manifesto": {
+    "label": "Manifesto / 01",
+    "item1": "No Templates.",
+    "item2": "No Mercy.",
+    "item3": "Code is Law.",
+    "item4": "Design is Power."
+  },
+  "transition": {
+    "home": "NEXTPIXEL",
+    "works": "WORKS",
+    "studio": "STUDIO",
+    "team": "TEAM",
+    "inquiry": "INQUIRY",
+    "careers": "CAREERS"
+  }
+}

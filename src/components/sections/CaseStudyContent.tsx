@@ -1,18 +1,18 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
-export default function CaseStudyContent() {
+export default async function CaseStudyContent() {
+	const t = await getTranslations("caseStudy");
+
 	return (
 		<>
 			<section className="mt-16 px-4">
 				<h2 className="text-3xl font-bold uppercase tracking-tight mb-6 leading-none">
-					REDEFINING DIGITAL{" "}
-					<span className="text-primary">LIQUIDITY</span> THROUGH GENERATIVE
-					MOTION.
+					{t("contentHeading")}{" "}
+					<span className="text-primary">{t("contentHighlight")}</span> {t("contentSuffix")}
 				</h2>
 				<p className="text-lg font-medium leading-relaxed mb-10 border-l-4 border-primary pl-4">
-					We built a dynamic ecosystem where data informs aesthetic. Lumina Tech
-					required a platform that didn&apos;t just display information, but
-					lived it.
+					{t("contentDescription")}
 				</p>
 				<div className="brutal-border-all p-2 mb-16 relative aspect-video">
 					<Image
@@ -29,14 +29,13 @@ export default function CaseStudyContent() {
 			<section className="bg-brutal-black text-white py-16 px-4">
 				<div className="mb-8">
 					<span className="inline-block bg-primary text-white text-[10px] font-bold px-2 py-1 mb-4 uppercase">
-						Technical Insight
+						{t("technicalLabel")}
 					</span>
 					<h3 className="text-4xl font-bold tracking-tighter uppercase mb-6 leading-[0.9]">
-						Real-time rendering.
+						{t("technicalHeading")}
 					</h3>
 					<p className="text-zinc-400 font-normal leading-snug">
-						Utilizing Three.js and custom GLSL shaders, we achieved a fluid
-						interface that reacts to user scroll velocity and cursor proximity.
+						{t("technicalDescription")}
 					</p>
 				</div>
 				<div className="flex flex-col gap-4">
@@ -51,7 +50,7 @@ export default function CaseStudyContent() {
 							<div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
 								<span className="text-3xl font-bold block">60FPS</span>
 								<span className="text-[10px] uppercase opacity-50 tracking-widest">
-									Performance
+									{t("performance")}
 								</span>
 							</div>
 						</div>
@@ -65,7 +64,7 @@ export default function CaseStudyContent() {
 							<div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
 								<span className="text-3xl font-bold block">0.4s</span>
 								<span className="text-[10px] uppercase opacity-50 tracking-widest">
-									Load Speed
+									{t("loadSpeed")}
 								</span>
 							</div>
 						</div>
@@ -84,7 +83,7 @@ export default function CaseStudyContent() {
 						sizes="100vw"
 					/>
 					<div className="absolute bottom-4 left-4 bg-white text-black font-bold px-3 py-1 text-xs brutal-border-all">
-						SYSTEM ARCHITECTURE
+						{t("systemArchitecture")}
 					</div>
 				</div>
 			</section>

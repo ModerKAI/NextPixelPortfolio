@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "title": "NextPixel | Neo-brutalistična digitalna agencija",
+    "description": "Ustvarjamo digitalni brutalizem za elitne blagovne znamke prihodnosti.",
+    "studioTitle": "NextPixel | Studio",
+    "studioDescription": "Oblikujemo digitalno odličnost. NextPixel je butični studio za digitalno arhitekturo."
+  },
+  "nav": {
+    "works": "Projekti",
+    "studio": "Studio",
+    "team": "Ekipa",
+    "close": "Zapri"
+  },
+  "hero": {
+    "title1": "Kreativna",
+    "title2": "Agencija",
+    "tagline": "USTVARJAMO DIGITALNI",
+    "taglineHighlight": "BRUTALIZEM",
+    "taglineSuffix": "ZA ELITNE BLAGOVNE ZNAMKE PRIHODNOSTI."
+  },
+  "studio": {
+    "aboutLabel": "O studiu",
+    "heading1": "Gradimo",
+    "headingHighlight": "digitalne",
+    "heading2": "izkušnje.",
+    "description1": "NextPixel je mlad studio, ki gradi spletne strani naslednje generacije. Združujemo najnovejše tehnologije z minimalističnim dizajnom in vsak projekt spreminjamo v digitalno umetnino.",
+    "description2": "Od kompleksnih spletnih aplikacij z React in Next.js do hitrih rešitev na no-code platformah — najdemo optimalen pristop za vsakega stranko. Naš cilj ni le ustvariti spletno stran, ampak zgraditi digitalni produkt, ki poganja vaše poslovanje.",
+    "service1Title": "Spletni razvoj",
+    "service1Desc": "Gradnja spletnih strani vsake kompleksnosti — od pristajnih strani do obsežnih spletnih aplikacij. Uporabljamo Next.js, React in najnovejše tehnologije.",
+    "service2Title": "No-Code rešitve",
+    "service2Desc": "Hiter zagon projektov na no-code platformah. Popolno za MVP-je in startupe, ki želijo čim hitreje na trg.",
+    "service3Title": "Spletno oblikovanje",
+    "service3Desc": "UI/UX oblikovanje, ki izstopa. Ustvarjamo vizualno močne vmesnike s poudarkom na uporabniški izkušnji in konverziji.",
+    "partners": "Partnerji",
+    "satisfaction": "Zadovoljstvo",
+    "support": "Podpora"
+  },
+  "projects": {
+    "featuredProjects": "Izbrani projekti"
+  },
+  "cta": {
+    "heading1": "Pripravljeni",
+    "heading2": "razbiti vzorce?",
+    "button": "Povpraševanje"
+  },
+  "footer": {
+    "heading": "Digitalna prihodnost. Zdaj.",
+    "tagline": "GRADIMO, KAR SI DRUGI NE UPAJO PREDSTAVLJATI."
+  },
+  "contact": {
+    "contact": "Kontakt"
+  },
+  "team": {
+    "title1": "MI SMO",
+    "title2": "ARHITEKTI",
+    "joinTitle1": "PRIDRUŽI SE",
+    "joinTitle2": "REVOLUCIJI",
+    "seekingTalent": "Vedno iščemo izjemne talente",
+    "careersButton": "Kariera",
+    "polinaRole": "Vodja oblikovanja",
+    "polinaDesc": "Oblikovanje nevidnega. Gradnja nemogočega. Mojstrstvo nad dizajnom.",
+    "arturRole": "Razvijalec / So-CEO",
+    "arturDesc": "Oblikovanje nevidnega. Gradnja nemogočega. Mojstrstvo nad kodo.",
+    "mishaRole": "Prodaja / So-CEO",
+    "mishaDesc": "Spodbujanje rasti in kovanje partnerstev. Spreminjanje vizije v poslovno realnost."
+  },
+  "studioPage": {
+    "heading1": "Oblikujemo",
+    "heading2": "Digitalno",
+    "heading3": "Odličnost",
+    "description": "NextPixel je butični studio za digitalno arhitekturo. Rušimo povprečnost, da bi zgradili visoko zmogljive digitalne ekosisteme, ki pritegnejo pozornost in spodbujajo konverzijo.",
+    "service1": "Spletno oblikovanje",
+    "service2": "AI avtomatizacija",
+    "service3": "Spletni razvoj",
+    "footerHeading": "Jedro studia.",
+    "footerText": "Pridružite se elitnemu krogu digitalnih arhitektov.",
+    "hireButton": "Najemi studio"
+  },
+  "works": {
+    "latest": "Najnovejši",
+    "worksYear": "Projekti '26"
+  },
+  "careers": {
+    "title1": "PRIDRUŽI SE",
+    "title2": "SINDIKATU",
+    "nameLabel": "Ime",
+    "namePlaceholder": "IDENTIFIKACIJSKI NIZ",
+    "emailLabel": "E-pošta",
+    "emailPlaceholder": "KOMM@PROTOKOL.NET",
+    "disciplineLabel": "Disciplina",
+    "portfolioLabel": "Povezava do portfelja",
+    "portfolioPlaceholder": "HTTPS://SURFACE.INDEX",
+    "fileLabel": "Priložena datoteka",
+    "dropText": "Odložite CV / Portfolio PDF",
+    "maxSize": "MAX_VELIKOST: 25MB",
+    "submitButton": "Pošlji prijavo",
+    "submitting": "Pošiljanje...",
+    "successTitle": "ODDANO",
+    "successMessage": "Prijava prejeta. Javili se vam bomo.",
+    "sendAnother": "Pošlji drugo",
+    "statusLabel": "Status",
+    "statusText": "Čakanje na prenos",
+    "securityNote": "Šifrirani protokol prenosa aktiven. S pošiljanjem se strinjate z našo arhitekturo obdelave podatkov.",
+    "errorMin2": "Najmanj 2 znaka",
+    "errorEmail": "Neveljavna oblika e-pošte",
+    "errorUrl": "Mora se začeti s http:// ali https://",
+    "errorGeneric": "Nekaj je šlo narobe",
+    "errorNetwork": "Omrežna napaka. Poskusite znova.",
+    "design": "Oblikovanje",
+    "engineering": "Razvoj",
+    "motion": "Animacija",
+    "strategy": "Strategija"
+  },
+  "inquiry": {
+    "title1": "Začnite",
+    "title2": "Projekt",
+    "descriptionLabel": "Opis projekta",
+    "descriptionPlaceholder": "POVEJTE NAM O SVOJI VIZIJI...",
+    "descriptionError": "Prosimo, opišite svoj projekt (min 10 znakov)",
+    "typeLabel": "Vrsta projekta",
+    "budgetLabel": "Proračunski okvir ($)",
+    "submitButton": "Pošlji povpraševanje",
+    "submitting": "Pošiljanje...",
+    "successTitle": "PREJETO",
+    "successMessage": "Pregledali bomo vaše povpraševanje in se vam javili.",
+    "sendAnother": "Pošlji drugo",
+    "directContact": "Neposredni kontakt",
+    "teamAvailable": "Ekipa je na voljo za Q4",
+    "errorGeneric": "Nekaj je šlo narobe",
+    "errorNetwork": "Omrežna napaka. Poskusite znova.",
+    "landing": "Landing",
+    "ecommerce": "E-trgovina",
+    "webDesign": "Spletno oblikovanje",
+    "customIdea": "Lastna ideja"
+  },
+  "caseStudy": {
+    "visitSite": "Obiščite stran",
+    "notFound": "Projekt ni najden",
+    "clientLabel": "Stranka",
+    "servicesLabel": "Storitve",
+    "yearLabel": "Leto",
+    "nextProject": "Naslednji projekt",
+    "copyright": "© 2026 NEXTPIXEL™",
+    "contentHeading": "REDEFINIRANJE DIGITALNE",
+    "contentHighlight": "FLUIDNOSTI",
+    "contentSuffix": "SKOZI GENERATIVNO GIBANJE.",
+    "contentDescription": "Zgradili smo dinamičen ekosistem, kjer podatki oblikujejo estetiko. Lumina Tech je potreboval platformo, ki informacij ni le prikazovala, ampak jih je živela.",
+    "technicalLabel": "Tehnični vpogled",
+    "technicalHeading": "Upodabljanje v realnem času.",
+    "technicalDescription": "Z uporabo Three.js in prilagojenih GLSL shaderjev smo dosegli tekoč vmesnik, ki se odziva na hitrost drsenja in bližino kazalca.",
+    "performance": "Zmogljivost",
+    "loadSpeed": "Hitrost nalaganja",
+    "systemArchitecture": "SISTEMSKA ARHITEKTURA"
+  },
+  "manifesto": {
+    "label": "Manifest / 01",
+    "item1": "Brez predlog.",
+    "item2": "Brez milosti.",
+    "item3": "Koda je zakon.",
+    "item4": "Oblikovanje je moč."
+  },
+  "transition": {
+    "home": "NEXTPIXEL",
+    "works": "PROJEKTI",
+    "studio": "STUDIO",
+    "team": "EKIPA",
+    "inquiry": "POVPRAŠEVANJE",
+    "careers": "KARIERA"
+  }
+}

@@ -3,12 +3,14 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ManifestoAnimation() {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const linesRef = useRef<(HTMLDivElement | null)[]>([]);
+	const t = useTranslations("manifesto");
 
 	useEffect(() => {
 		const ctx = gsap.context(() => {
@@ -44,10 +46,10 @@ export default function ManifestoAnimation() {
 	}, []);
 
 	const manifestoItems = [
-		"No Templates.",
-		"No Mercy.",
-		"Code is Law.",
-		"Design is Power.",
+		t("item1"),
+		t("item2"),
+		t("item3"),
+		t("item4"),
 	];
 
 	return (
@@ -57,7 +59,7 @@ export default function ManifestoAnimation() {
 		>
 			<div className="mb-16">
 				<span className="text-xs font-black uppercase tracking-[0.3em] opacity-60">
-					Manifesto / 01
+					{t("label")}
 				</span>
 			</div>
 			<div className="flex flex-col gap-12">

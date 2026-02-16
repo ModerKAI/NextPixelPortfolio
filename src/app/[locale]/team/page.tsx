@@ -1,47 +1,44 @@
+"use client";
+
 import TransitionLink from "@/components/ui/TransitionLink";
 import Navbar from "@/components/layout/Navbar";
 import ContactBar from "@/components/layout/ContactBar";
-
-interface TeamMember {
-	name: string;
-	role: string;
-	image: string;
-	description: string;
-}
-
-const teamMembers: TeamMember[] = [
-	{
-		name: "POLINA",
-		role: "Design Lead",
-		image: "/polina.gif",
-		description: "Architecting the unseen. Building the impossible. Mastery over design.",
-	},
-	{
-		name: "ARTUR",
-		role: "Coder / Co-CEO",
-		image: "/artur.gif",
-		description: "Architecting the unseen. Building the impossible. Mastery over code.",
-	},
-	{
-		name: "Misha",
-		role: "Salesman / Co-CEO",
-		image: "/misha.gif",
-		description: "Driving growth and forging partnerships. Turning vision into business reality.",
-	},
-];
-
 import TeamScrollSequence from "@/components/animations/TeamScrollSequence";
+import { useTranslations } from "next-intl";
 
 export default function TeamPage() {
+	const t = useTranslations("team");
+
+	const teamMembers = [
+		{
+			name: "POLINA",
+			role: t("polinaRole"),
+			image: "/polina.gif",
+			description: t("polinaDesc"),
+		},
+		{
+			name: "ARTUR",
+			role: t("arturRole"),
+			image: "/artur.gif",
+			description: t("arturDesc"),
+		},
+		{
+			name: "Misha",
+			role: t("mishaRole"),
+			image: "/misha.gif",
+			description: t("mishaDesc"),
+		},
+	];
+
 	return (
 		<>
 			<Navbar variant="team" />
 			<main className="relative bg-white text-black">
 				<section className="h-[50vh] flex flex-col justify-end p-6 border-b-4 border-black sticky top-0">
 					<h1 className="text-huge font-bold uppercase -ml-1">
-						THE
+						{t("title1")}
 						<br />
-						ARCHITECTS
+						{t("title2")}
 					</h1>
 					<div className="w-full h-1 bg-black mt-8" />
 				</section>
@@ -52,19 +49,19 @@ export default function TeamPage() {
 
 				<section className="h-screen relative z-40 flex flex-col items-center justify-center text-center space-y-8 bg-white text-black">
 					<h2 className="text-[clamp(3rem,8vw,6rem)] font-black uppercase tracking-tighter leading-none">
-						JOIN THE
+						{t("joinTitle1")}
 						<br />
-						REVOLUTION
+						{t("joinTitle2")}
 					</h2>
 					<p className="text-gray-500 text-sm font-medium uppercase tracking-widest">
-						Always seeking elite talent
+						{t("seekingTalent")}
 					</p>
 					<TransitionLink
 						href="/careers"
 						className="group relative flex items-center gap-4 bg-black text-white border-4 border-black p-2 rounded-full toggle-shadow active:translate-x-1 active:translate-y-1 active:shadow-none transition-all duration-75"
 					>
 						<span className="pl-6 pr-2 font-black uppercase tracking-widest text-sm">
-							Careers
+							{t("careersButton")}
 						</span>
 						<div className="w-16 h-10 bg-white rounded-full p-1 flex items-center transition-colors group-hover:bg-primary">
 							<div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">

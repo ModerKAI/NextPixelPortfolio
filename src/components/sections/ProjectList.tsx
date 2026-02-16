@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import TransitionLink from "@/components/ui/TransitionLink";
+import { useTranslations } from "next-intl";
 
 interface Project {
 	number: string;
@@ -26,13 +27,14 @@ const projects: Project[] = [
 
 export default function ProjectList() {
 	const containerRef = useRef<HTMLElement>(null);
+	const t = useTranslations("projects");
 
 	return (
 		<section ref={containerRef} className="mt-12">
 
 			<div className="px-6 py-4 border-y-[3px] border-black flex justify-between items-center bg-black text-white">
 				<span className="uppercase font-bold tracking-widest text-xs">
-					Featured Projects
+					{t("featuredProjects")}
 				</span>
 				<span className="material-icons text-sm">arrow_downward</span>
 			</div>

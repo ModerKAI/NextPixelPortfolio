@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import TransitionLink from "@/components/ui/TransitionLink";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 interface NavbarProps {
 	variant?: "default" | "works" | "team" | "case-study" | "studio";
@@ -9,6 +11,7 @@ interface NavbarProps {
 
 export default function Navbar({ variant = "default" }: NavbarProps) {
 	const [menuOpen, setMenuOpen] = useState(false);
+	const t = useTranslations("nav");
 
 	if (variant === "case-study") {
 		return (
@@ -25,6 +28,8 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
 							NextPixel
 						</TransitionLink>
 					</div>
+				<div className="flex items-center gap-2">
+					<LanguageSwitcher />
 					<button
 						className="material-icons text-3xl"
 						aria-label="Menu"
@@ -32,6 +37,7 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
 					>
 						{menuOpen ? "close" : "menu"}
 					</button>
+				</div>
 				</nav>
 
 				<div
@@ -44,21 +50,21 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
 							className="px-6 py-5 font-black uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-colors"
 							onClick={() => setMenuOpen(false)}
 						>
-							Works
+							{t("works")}
 						</TransitionLink>
 						<TransitionLink
 							href="/studio"
 							className="px-6 py-5 font-black uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-colors"
 							onClick={() => setMenuOpen(false)}
 						>
-							Studio
+							{t("studio")}
 						</TransitionLink>
 						<TransitionLink
 							href="/team"
 							className="px-6 py-5 font-black uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-colors"
 							onClick={() => setMenuOpen(false)}
 						>
-							Team
+							{t("team")}
 						</TransitionLink>
 					</div>
 				</div>
@@ -83,18 +89,18 @@ export default function Navbar({ variant = "default" }: NavbarProps) {
 					href="/works"
 					className={`hover:underline ${variant === "works" ? "text-primary" : ""}`}
 				>
-					Works
+					{t("works")}
 				</TransitionLink>
 				<TransitionLink href="/studio" className={`hover:underline ${variant === "studio" ? "text-primary underline decoration-2 underline-offset-4" : ""}`}>
-					Studio
+					{t("studio")}
 				</TransitionLink>
 				<TransitionLink
 					href="/team"
 					className={`hover:underline ${variant === "team" ? "text-primary underline decoration-2 underline-offset-4" : ""}`}
 				>
-					Team
+					{t("team")}
 				</TransitionLink>
-
+				<LanguageSwitcher />
 			</div>
 		</nav>
 	);

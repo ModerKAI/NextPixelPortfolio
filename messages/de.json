@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "title": "NextPixel | Neo-Brutalistische Digitalagentur",
+    "description": "Wir gestalten digitalen Brutalismus für die Elitemarken der Zukunft.",
+    "studioTitle": "NextPixel | Studio",
+    "studioDescription": "Wir gestalten digitale Exzellenz. NextPixel ist ein Boutique-Studio für digitale Architektur."
+  },
+  "nav": {
+    "works": "Projekte",
+    "studio": "Studio",
+    "team": "Team",
+    "close": "Schließen"
+  },
+  "hero": {
+    "title1": "Kreativ",
+    "title2": "Agentur",
+    "tagline": "DIGITALER",
+    "taglineHighlight": "BRUTALISMUS",
+    "taglineSuffix": "FÜR DIE ELITEMARKEN DER ZUKUNFT."
+  },
+  "studio": {
+    "aboutLabel": "Über das Studio",
+    "heading1": "Wir bauen",
+    "headingHighlight": "digitale",
+    "heading2": "Erlebnisse.",
+    "description1": "NextPixel ist ein junges Studio, das Websites der nächsten Generation entwickelt. Wir verbinden modernste Technologien mit minimalistischem Design und verwandeln jedes Projekt in ein digitales Kunstwerk.",
+    "description2": "Von komplexen Webanwendungen mit React und Next.js bis hin zu schnellen Lösungen auf No-Code-Plattformen — wir finden den optimalen Ansatz für jeden Kunden. Unser Ziel ist es nicht nur, eine Website zu erstellen, sondern ein digitales Produkt zu schaffen, das Ihr Geschäft vorantreibt.",
+    "service1Title": "Webentwicklung",
+    "service1Desc": "Erstellung von Websites jeder Komplexität — von Landingpages bis hin zu großen Webanwendungen. Wir verwenden Next.js, React und modernste Technologien.",
+    "service2Title": "No-Code-Lösungen",
+    "service2Desc": "Schnelle Projektlancierungen auf No-Code-Plattformen. Perfekt für MVPs und Startups, die so schnell wie möglich auf den Markt kommen möchten.",
+    "service3Title": "Webdesign",
+    "service3Desc": "UI/UX-Design, das auffällt. Wir schaffen visuell starke Interfaces mit Fokus auf Benutzererfahrung und Konversion.",
+    "partners": "Partner",
+    "satisfaction": "Zufriedenheit",
+    "support": "Support"
+  },
+  "projects": {
+    "featuredProjects": "Ausgewählte Projekte"
+  },
+  "cta": {
+    "heading1": "Bereit,",
+    "heading2": "Muster zu brechen?",
+    "button": "Projektanfrage"
+  },
+  "footer": {
+    "heading": "Digitale Zukunft. Jetzt.",
+    "tagline": "WIR BAUEN, WAS ANDERE SICH NICHT VORSTELLEN KÖNNEN."
+  },
+  "contact": {
+    "contact": "Kontakt"
+  },
+  "team": {
+    "title1": "DIE",
+    "title2": "ARCHITEKTEN",
+    "joinTitle1": "WERDE TEIL DER",
+    "joinTitle2": "REVOLUTION",
+    "seekingTalent": "Immer auf der Suche nach Elite-Talenten",
+    "careersButton": "Karriere",
+    "polinaRole": "Design-Leiterin",
+    "polinaDesc": "Das Unsichtbare gestalten. Das Unmögliche bauen. Meisterschaft über Design.",
+    "arturRole": "Entwickler / Co-CEO",
+    "arturDesc": "Das Unsichtbare gestalten. Das Unmögliche bauen. Meisterschaft über Code.",
+    "mishaRole": "Vertrieb / Co-CEO",
+    "mishaDesc": "Wachstum vorantreiben und Partnerschaften schmieden. Vision in geschäftliche Realität verwandeln."
+  },
+  "studioPage": {
+    "heading1": "Wir Gestalten",
+    "heading2": "Digitale",
+    "heading3": "Exzellenz",
+    "description": "NextPixel ist ein Boutique-Studio für digitale Architektur. Wir beseitigen Mittelmäßigkeit, um leistungsstarke digitale Ökosysteme aufzubauen, die Aufmerksamkeit erregen und Konversion antreiben.",
+    "service1": "Webdesign",
+    "service2": "KI-Automatisierung",
+    "service3": "Webentwicklung",
+    "footerHeading": "Studio Kern.",
+    "footerText": "Treten Sie dem elitären Kreis digitaler Architekten bei.",
+    "hireButton": "Studio beauftragen"
+  },
+  "works": {
+    "latest": "Neueste",
+    "worksYear": "Projekte '26"
+  },
+  "careers": {
+    "title1": "TRITT DEM",
+    "title2": "SYNDIKAT BEI",
+    "nameLabel": "Name",
+    "namePlaceholder": "IDENTITÄTSSTRING",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "KOMM@PROTOKOLL.NET",
+    "disciplineLabel": "Fachgebiet",
+    "portfolioLabel": "Portfolio-Link",
+    "portfolioPlaceholder": "HTTPS://SURFACE.INDEX",
+    "fileLabel": "Dateianhang",
+    "dropText": "CV / Portfolio PDF ablegen",
+    "maxSize": "MAX_GRÖSSE: 25MB",
+    "submitButton": "Bewerbung senden",
+    "submitting": "Wird gesendet...",
+    "successTitle": "ÜBERMITTELT",
+    "successMessage": "Bewerbung erhalten. Wir melden uns bei Ihnen.",
+    "sendAnother": "Weitere senden",
+    "statusLabel": "Status",
+    "statusText": "Wartet auf Übertragung",
+    "securityNote": "Verschlüsseltes Übertragungsprotokoll aktiv. Mit der Übermittlung stimmen Sie unserer Datenverarbeitungsarchitektur zu.",
+    "errorMin2": "Mindestens 2 Zeichen",
+    "errorEmail": "Ungültiges E-Mail-Format",
+    "errorUrl": "Muss mit http:// oder https:// beginnen",
+    "errorGeneric": "Etwas ist schiefgelaufen",
+    "errorNetwork": "Netzwerkfehler. Erneut versuchen.",
+    "design": "Design",
+    "engineering": "Entwicklung",
+    "motion": "Motion",
+    "strategy": "Strategie"
+  },
+  "inquiry": {
+    "title1": "Starten Sie ein",
+    "title2": "Projekt",
+    "descriptionLabel": "Projektbeschreibung",
+    "descriptionPlaceholder": "ERZÄHLEN SIE UNS VON IHRER VISION...",
+    "descriptionError": "Bitte beschreiben Sie Ihr Projekt (mind. 10 Zeichen)",
+    "typeLabel": "Projekttyp",
+    "budgetLabel": "Budgetrahmen ($)",
+    "submitButton": "Anfrage senden",
+    "submitting": "Wird gesendet...",
+    "successTitle": "ERHALTEN",
+    "successMessage": "Wir prüfen Ihre Anfrage und melden uns bei Ihnen.",
+    "sendAnother": "Weitere senden",
+    "directContact": "Direkter Kontakt",
+    "teamAvailable": "Team verfügbar für Q4",
+    "errorGeneric": "Etwas ist schiefgelaufen",
+    "errorNetwork": "Netzwerkfehler. Erneut versuchen.",
+    "landing": "Landing",
+    "ecommerce": "E-Commerce",
+    "webDesign": "Webdesign",
+    "customIdea": "Eigene Idee"
+  },
+  "caseStudy": {
+    "visitSite": "Website besuchen",
+    "notFound": "Projekt nicht gefunden",
+    "clientLabel": "Kunde",
+    "servicesLabel": "Leistungen",
+    "yearLabel": "Jahr",
+    "nextProject": "Nächstes Projekt",
+    "copyright": "© 2026 NEXTPIXEL™",
+    "contentHeading": "DIGITALE",
+    "contentHighlight": "LIQUIDITÄT",
+    "contentSuffix": "DURCH GENERATIVE MOTION NEU DEFINIERT.",
+    "contentDescription": "Wir haben ein dynamisches Ökosystem aufgebaut, in dem Daten die Ästhetik bestimmen. Lumina Tech brauchte eine Plattform, die Informationen nicht nur anzeigte, sondern lebte.",
+    "technicalLabel": "Technischer Einblick",
+    "technicalHeading": "Echtzeit-Rendering.",
+    "technicalDescription": "Mit Three.js und benutzerdefinierten GLSL-Shadern haben wir eine flüssige Oberfläche geschaffen, die auf Scroll-Geschwindigkeit und Cursor-Nähe reagiert.",
+    "performance": "Leistung",
+    "loadSpeed": "Ladezeit",
+    "systemArchitecture": "SYSTEMARCHITEKTUR"
+  },
+  "manifesto": {
+    "label": "Manifest / 01",
+    "item1": "Keine Vorlagen.",
+    "item2": "Keine Gnade.",
+    "item3": "Code ist Gesetz.",
+    "item4": "Design ist Macht."
+  },
+  "transition": {
+    "home": "NEXTPIXEL",
+    "works": "PROJEKTE",
+    "studio": "STUDIO",
+    "team": "TEAM",
+    "inquiry": "ANFRAGE",
+    "careers": "KARRIERE"
+  }
+}

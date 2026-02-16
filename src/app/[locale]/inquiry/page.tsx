@@ -4,8 +4,9 @@ import { useState, useRef } from "react";
 import TransitionLink from "@/components/ui/TransitionLink";
 import Navbar from "@/components/layout/Navbar";
 import BackgroundGrid from "@/components/layout/BackgroundGrid";
+import { useTranslations } from "next-intl";
 
-const projectTypes = ["Landing", "E-Commerce", "Web Design", "Custom Idea"] as const;
+const projectTypeKeys = ["landing", "ecommerce", "webDesign", "customIdea"] as const;
 const budgetRanges = ["500 - 1000", "1000 - 2000", "2000 - 5000", "5000+"] as const;
 
 interface FormErrors {
@@ -13,7 +14,9 @@ interface FormErrors {
 }
 
 export default function InquiryPage() {
-	const [activeType, setActiveType] = useState<string>("Landing");
+	const t = useTranslations("inquiry");
+	const tNav = useTranslations("nav");
+	const [activeType, setActiveType] = useState<string>("landing");
 	const [budget, setBudget] = useState<string>("500 - 1000");
 	const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 	const [errors, setErrors] = useState<FormErrors>({});
@@ -31,7 +34,7 @@ export default function InquiryPage() {
 
 		const errs: FormErrors = {};
 		if (!description || description.trim().length < 10) {
-			errs.description = "Please describe your project (min 10 chars)";
+			errs.description = t("descriptionError");
 		}
 		setErrors(errs);
 		if (Object.keys(errs).length > 0) return;
@@ -53,7 +56,7 @@ export default function InquiryPage() {
 			const data = await res.json();
 
 			if (!res.ok) {
-				setServerError(data.error || "Something went wrong");
+				setServerError(data.error || t("errorGeneric"));
 				setStatus("error");
 				return;
 			}
@@ -61,7 +64,7 @@ export default function InquiryPage() {
 			setStatus("success");
 			form.reset();
 		} catch {
-			setServerError("Network error. Try again.");
+			setServerError(t("errorNetwork"));
 			setStatus("error");
 		}
 	};
@@ -75,16 +78,16 @@ export default function InquiryPage() {
 						<span className="material-icons text-white text-4xl">check</span>
 					</div>
 					<h1 className="text-huge font-bold uppercase -ml-1 mb-4">
-						RECEIVED
+						{t("successTitle")}
 					</h1>
 					<p className="text-lg font-medium text-gray-500 uppercase tracking-widest mb-8">
-						We&apos;ll review your inquiry and get back to you.
+						{t("successMessage")}
 					</p>
 					<button
 						onClick={() => setStatus("idle")}
 						className="bg-black text-white py-4 px-8 font-black uppercase tracking-tighter text-sm active:scale-[0.98] transition-transform"
 					>
-						Send Another
+						{t("sendAnother")}
 					</button>
 				</main>
 				<BackgroundGrid />
@@ -101,26 +104,26 @@ export default function InquiryPage() {
 					href="/"
 					className="font-bold uppercase text-sm border-brutal px-3 py-1 bg-white toggle-shadow active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
 				>
-					Close
+					{tNav("close")}
 				</TransitionLink>
 			</nav>
 
 			<main className="relative p-6 space-y-12 pb-32">
 				<header>
 					<h1 className="text-huge font-bold uppercase -ml-1">
-						Start a<br />Project
+						{t("title1")}<br />{t("title2")}
 					</h1>
 				</header>
 
 				<form ref={formRef} className="space-y-10" onSubmit={handleSubmit}>
 					<section className="space-y-4">
 						<label className="text-xs font-black uppercase tracking-widest block">
-							Project Description
+							{t("descriptionLabel")}
 						</label>
 						<textarea
 							name="description"
 							className="w-full h-48 bg-white border-brutal p-6 text-xl font-bold uppercase placeholder:text-gray-300 focus:ring-0 focus:outline-none focus:border-primary transition-colors"
-							placeholder="TELL US ABOUT YOUR VISION..."
+							placeholder={t("descriptionPlaceholder")}
 						/>
 						{errors.description && (
 							<p className="text-red-500 text-xs font-bold">{errors.description}</p>
@@ -129,10 +132,10 @@ export default function InquiryPage() {
 
 					<section className="space-y-4">
 						<label className="text-xs font-black uppercase tracking-widest block">
-							Project Type
+							{t("typeLabel")}
 						</label>
 						<div className="grid grid-cols-2 gap-3">
-							{projectTypes.map((type) => (
+							{projectTypeKeys.map((type) => (
 								<button
 									key={type}
 									type="button"
@@ -142,7 +145,7 @@ export default function InquiryPage() {
 										: "bg-white hover:bg-gray-50"
 										}`}
 								>
-									{type}
+									{t(type)}
 								</button>
 							))}
 						</div>
@@ -150,7 +153,7 @@ export default function InquiryPage() {
 
 					<section className="space-y-4">
 						<label className="text-xs font-black uppercase tracking-widest block">
-							Budget Range ($)
+							{t("budgetLabel")}
 						</label>
 						<div className="relative">
 							<select
@@ -178,7 +181,7 @@ export default function InquiryPage() {
 							disabled={status === "sending"}
 						>
 							<span className="pl-8 font-black uppercase tracking-widest text-lg">
-								{status === "sending" ? "Sending..." : "Send Inquiry"}
+								{status === "sending" ? t("submitting") : t("submitButton")}
 							</span>
 							<div className="w-16 h-16 bg-white rounded-full p-1 flex items-center justify-center group-hover:bg-primary transition-colors">
 								<div className="w-10 h-10 border-brutal border-3 rounded-full flex items-center justify-center bg-black">
@@ -195,7 +198,7 @@ export default function InquiryPage() {
 					<div className="bg-black text-white border-brutal px-4 py-2 flex items-center gap-3">
 						<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
 						<span className="text-[10px] font-black uppercase tracking-widest">
-							Team Available for Q4
+							{t("teamAvailable")}
 						</span>
 					</div>
 				</footer>
@@ -207,7 +210,7 @@ export default function InquiryPage() {
 						<div className="absolute bottom-full right-0 mb-4 bg-black text-white border-brutal p-4 w-64 animate-in fade-in slide-in-from-bottom-2 duration-300">
 							<div className="flex justify-between items-start mb-2">
 								<span className="text-[10px] font-black uppercase tracking-widest text-gray-400">
-									Direct Contact
+									{t("directContact")}
 								</span>
 								<button
 									onClick={() => setShowTooltip(false)}

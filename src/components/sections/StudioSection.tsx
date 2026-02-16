@@ -1,24 +1,25 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 export default function StudioSection() {
+	const t = useTranslations("studio");
+
 	const services = [
 		{
 			number: "01",
-			title: "Web Development",
-			description:
-				"Building websites of any complexity — from landing pages to large-scale web applications. We use Next.js, React, and cutting-edge technologies.",
+			title: t("service1Title"),
+			description: t("service1Desc"),
 		},
 		{
 			number: "02",
-			title: "No-Code Solutions",
-			description:
-				"Rapid project launches on no-code platforms. Perfect for MVPs and startups looking to hit the market as fast as possible.",
+			title: t("service2Title"),
+			description: t("service2Desc"),
 		},
 		{
 			number: "03",
-			title: "Web Design",
-			description:
-				"UI/UX design that stands out. We create visually powerful interfaces focused on user experience and conversion.",
+			title: t("service3Title"),
+			description: t("service3Desc"),
 		},
 	];
 
@@ -28,28 +29,23 @@ export default function StudioSection() {
 			<div className="flex items-center gap-3 mb-12">
 				<div className="w-3 h-3 bg-primary rounded-full" />
 				<span className="text-xs font-bold uppercase tracking-[0.3em] opacity-60">
-					About Studio
+					{t("aboutLabel")}
 				</span>
 			</div>
 
 			<div className="mb-16">
 				<h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.9] mb-8">
-					We build{" "}
-					<span className="text-primary italic">digital</span>
+					{t("heading1")}{" "}
+					<span className="text-primary italic">{t("headingHighlight")}</span>
 					<br />
-					experiences.
+					{t("heading2")}
 				</h2>
 				<div className="max-w-2xl">
 					<p className="text-lg font-medium leading-relaxed mb-6 border-l-4 border-primary pl-6">
-						NextPixel is a young studio building next-generation websites.
-						We combine cutting-edge technologies with minimalist design,
-						turning every project into a digital work of art.
+						{t("description1")}
 					</p>
 					<p className="text-base text-zinc-500 leading-relaxed">
-						From complex web applications built with React and Next.js to rapid
-						solutions on no-code platforms — we find the optimal approach for every
-						client. Our goal is not just to create a website, but to build a digital
-						product that drives your business forward.
+						{t("description2")}
 					</p>
 				</div>
 			</div>
@@ -80,13 +76,13 @@ export default function StudioSection() {
 				<div className="p-6 text-center border-r-[3px] border-black">
 					<span className="text-4xl md:text-5xl font-black block">3+</span>
 					<span className="text-[10px] uppercase tracking-widest opacity-50 font-bold">
-						Partners
+						{t("partners")}
 					</span>
 				</div>
 				<div className="p-6 text-center border-r-[3px] border-black">
 					<span className="text-4xl md:text-5xl font-black block">100%</span>
 					<span className="text-[10px] uppercase tracking-widest opacity-50 font-bold">
-						Satisfaction
+						{t("satisfaction")}
 					</span>
 				</div>
 				<div className="p-6 text-center">
@@ -94,7 +90,7 @@ export default function StudioSection() {
 						24/7
 					</span>
 					<span className="text-[10px] uppercase tracking-widest opacity-50 font-bold">
-						Support
+						{t("support")}
 					</span>
 				</div>
 			</div>

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
-import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
-import PageTransitionProvider from "@/providers/PageTransitionProvider";
 import GrainOverlay from "@/components/layout/GrainOverlay";
 
 const spaceGrotesk = Space_Grotesk({
@@ -30,7 +28,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html suppressHydrationWarning>
 			<head>
 				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -50,9 +48,7 @@ export default function RootLayout({
 				className={`${spaceGrotesk.variable} ${barlowCondensed.variable} font-display bg-background-light text-black overflow-x-hidden antialiased`}
 			>
 				<GrainOverlay />
-				<PageTransitionProvider>
-					<SmoothScrollProvider>{children}</SmoothScrollProvider>
-				</PageTransitionProvider>
+				{children}
 			</body>
 		</html>
 	);

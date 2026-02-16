@@ -3,6 +3,8 @@ import CaseStudyHero from "@/components/sections/CaseStudyHero";
 import CaseStudyInfoGrid from "@/components/sections/CaseStudyInfoGrid";
 import CaseStudyContent from "@/components/sections/CaseStudyContent";
 import NextProject from "@/components/sections/NextProject";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 const projectData: Record<
 	string,
@@ -34,7 +36,10 @@ const projectData: Record<
 };
 
 export function generateStaticParams() {
-	return Object.keys(projectData).map((slug) => ({ slug }));
+	const slugs = Object.keys(projectData);
+	return routing.locales.flatMap((locale) =>
+		slugs.map((slug) => ({ locale, slug }))
+	);
 }
 
 export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -51,15 +56,17 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
 export default async function CaseStudyPage({
 	params,
 }: {
-	params: Promise<{ slug: string }>;
+	params: Promise<{ locale: string; slug: string }>;
 }) {
-	const { slug } = await params;
+	const { locale, slug } = await params;
+	setRequestLocale(locale);
+	const t = await getTranslations("caseStudy");
 	const data = projectData[slug];
 
 	if (!data) {
 		return (
 			<div className="min-h-screen flex items-center justify-center">
-				<p className="text-2xl font-bold">Project not found</p>
+				<p className="text-2xl font-bold">{t("notFound")}</p>
 			</div>
 		);
 	}
@@ -76,9 +83,9 @@ export default async function CaseStudyPage({
 			/>
 			<CaseStudyInfoGrid
 				items={[
-					{ label: "Client", value: data.client },
-					{ label: "Services", value: data.services },
-					{ label: "Year", value: data.year },
+					{ label: t("clientLabel"), value: data.client },
+					{ label: t("servicesLabel"), value: data.services },
+					{ label: t("yearLabel"), value: data.year },
 				]}
 			/>
 			{data.link && (
@@ -90,7 +97,7 @@ export default async function CaseStudyPage({
 						className="w-full group relative flex items-center justify-between bg-black text-white border-brutal p-2 rounded-full toggle-shadow active:translate-x-1 active:translate-y-1 active:shadow-none transition-all"
 					>
 						<span className="pl-8 font-black uppercase tracking-widest text-lg">
-							Visit Site
+							{t("visitSite")}
 						</span>
 						<div className="w-16 h-16 bg-white rounded-full p-1 flex items-center justify-center group-hover:bg-primary transition-colors">
 							<div className="w-10 h-10 border-brutal border-3 rounded-full flex items-center justify-center bg-black">

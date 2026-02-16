@@ -2,6 +2,7 @@
 
 import { type ReactNode, type MouseEvent } from "react";
 import { usePageTransition } from "@/providers/PageTransitionProvider";
+import { useLocale } from "next-intl";
 
 interface TransitionLinkProps {
 	href: string;
@@ -23,6 +24,7 @@ export default function TransitionLink({
 	...rest
 }: TransitionLinkProps) {
 	const { navigateTo } = usePageTransition();
+	const locale = useLocale();
 
 	const isExternal =
 		href.startsWith("http") ||
@@ -37,6 +39,8 @@ export default function TransitionLink({
 		);
 	}
 
+	const localizedHref = href.startsWith(`/${locale}`) ? href : `/${locale}${href}`;
+
 	return (
 		<div
 			role="link"
@@ -47,12 +51,12 @@ export default function TransitionLink({
 				e.preventDefault();
 				e.stopPropagation();
 				onClick?.(e);
-				navigateTo(href);
+				navigateTo(localizedHref);
 			}}
 			onKeyDown={(e) => {
 				if (e.key === "Enter" || e.key === " ") {
 					e.preventDefault();
-					navigateTo(href);
+					navigateTo(localizedHref);
 				}
 			}}
 			{...rest}

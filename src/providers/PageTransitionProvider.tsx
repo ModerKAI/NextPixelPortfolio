@@ -10,26 +10,23 @@ import {
 } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { gsap } from "@/lib/gsap";
+import { useTranslations } from "next-intl";
 
-const ROUTE_LABELS: Record<string, string> = {
-	"/": "NEXTPIXEL",
-	"/works": "WORKS",
-	"/studio": "STUDIO",
-	"/team": "TEAM",
-	"/inquiry": "INQUIRY",
-	"/careers": "CAREERS",
-};
-
-function labelFor(href: string) {
-	if (ROUTE_LABELS[href]) return ROUTE_LABELS[href];
-	if (href.startsWith("/works/")) {
-		return href
-			.split("/")
-			.pop()!
-			.replace(/-/g, " ")
-			.toUpperCase();
-	}
-	return "NEXTPIXEL";
+function useLabelFor() {
+	const t = useTranslations("transition");
+	return (href: string) => {
+		const path = href.replace(/^\/(en|de|sl)/, "") || "/";
+		if (path === "/") return t("home");
+		if (path === "/works") return t("works");
+		if (path === "/studio") return t("studio");
+		if (path === "/team") return t("team");
+		if (path === "/inquiry") return t("inquiry");
+		if (path === "/careers") return t("careers");
+		if (path.startsWith("/works/")) {
+			return path.split("/").pop()!.replace(/-/g, " ").toUpperCase();
+		}
+		return t("home");
+	};
 }
 
 interface TransitionCtx {
@@ -56,9 +53,13 @@ export default function PageTransitionProvider({
 	const labelRef = useRef<HTMLSpanElement>(null);
 	const isAnimating = useRef(false);
 
+	const labelFor = useLabelFor();
+	const labelForRef = useRef(labelFor);
+
 	useEffect(() => {
 		routerRef.current = router;
 		pathnameRef.current = pathname;
+		labelForRef.current = labelFor;
 	});
 
 	const navigateTo = useCallback((href: string) => {
@@ -69,7 +70,7 @@ export default function PageTransitionProvider({
 		const label = labelRef.current;
 		if (!curtain || !label) return;
 
-		label.textContent = labelFor(href);
+		label.textContent = labelForRef.current(href);
 
 		curtain.style.transform = "translateX(-100%)";
 		label.style.opacity = "0";

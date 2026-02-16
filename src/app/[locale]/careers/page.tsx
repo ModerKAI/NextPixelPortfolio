@@ -3,8 +3,9 @@
 import { useState, useRef } from "react";
 import Navbar from "@/components/layout/Navbar";
 import BackgroundGrid from "@/components/layout/BackgroundGrid";
+import { useTranslations } from "next-intl";
 
-const disciplines = ["Design", "Engineering", "Motion", "Strategy"] as const;
+const disciplineKeys = ["design", "engineering", "motion", "strategy"] as const;
 
 interface FormErrors {
 	name?: string;
@@ -13,7 +14,8 @@ interface FormErrors {
 }
 
 export default function CareersPage() {
-	const [activeDiscipline, setActiveDiscipline] = useState<string>("Design");
+	const t = useTranslations("careers");
+	const [activeDiscipline, setActiveDiscipline] = useState<string>("design");
 	const [fileName, setFileName] = useState<string | null>(null);
 	const [fileBase64, setFileBase64] = useState<string | null>(null);
 	const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -24,11 +26,11 @@ export default function CareersPage() {
 
 	const validate = (name: string, email: string, portfolioLink: string): FormErrors => {
 		const errs: FormErrors = {};
-		if (!name || name.trim().length < 2) errs.name = "Minimum 2 characters";
+		if (!name || name.trim().length < 2) errs.name = t("errorMin2");
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		if (!email || !emailRegex.test(email)) errs.email = "Invalid email format";
+		if (!email || !emailRegex.test(email)) errs.email = t("errorEmail");
 		if (portfolioLink && portfolioLink.trim() !== "" && !/^https?:\/\/.+\..+/.test(portfolioLink)) {
-			errs.portfolioLink = "Must start with http:// or https://";
+			errs.portfolioLink = t("errorUrl");
 		}
 		return errs;
 	};
@@ -78,7 +80,7 @@ export default function CareersPage() {
 			const data = await res.json();
 
 			if (!res.ok) {
-				setServerError(data.error || "Something went wrong");
+				setServerError(data.error || t("errorGeneric"));
 				setStatus("error");
 				return;
 			}
@@ -88,7 +90,7 @@ export default function CareersPage() {
 			setFileName(null);
 			setFileBase64(null);
 		} catch {
-			setServerError("Network error. Try again.");
+			setServerError(t("errorNetwork"));
 			setStatus("error");
 		}
 	};
@@ -130,16 +132,16 @@ export default function CareersPage() {
 						<span className="material-icons text-white text-4xl">check</span>
 					</div>
 					<h1 className="text-huge font-bold uppercase -ml-1 mb-4">
-						TRANSMITTED
+						{t("successTitle")}
 					</h1>
 					<p className="text-lg font-medium text-gray-500 uppercase tracking-widest mb-8">
-						Application received. We&apos;ll be in touch.
+						{t("successMessage")}
 					</p>
 					<button
 						onClick={() => setStatus("idle")}
 						className="bg-black text-white py-4 px-8 font-black uppercase tracking-tighter text-sm active:scale-[0.98] transition-transform"
 					>
-						Send Another
+						{t("sendAnother")}
 					</button>
 				</main>
 				<BackgroundGrid />
@@ -153,9 +155,9 @@ export default function CareersPage() {
 			<main className="relative pb-10">
 				<section className="p-6 pt-12">
 					<h1 className="text-huge font-bold uppercase -ml-1 mb-8">
-						JOIN THE
+						{t("title1")}
 						<br />
-						SYNDICATE
+						{t("title2")}
 					</h1>
 					<div className="w-full h-1 bg-black mb-12" />
 				</section>
@@ -163,12 +165,12 @@ export default function CareersPage() {
 				<form ref={formRef} className="px-6 space-y-0" onSubmit={handleSubmit}>
 					<div className="border-b-2 border-black mb-6">
 						<label className="font-mono text-[10px] font-bold uppercase tracking-widest text-gray-500">
-							Name
+							{t("nameLabel")}
 						</label>
 						<input
 							name="name"
 							className="brutal-input"
-							placeholder="IDENTITY STRING"
+							placeholder={t("namePlaceholder")}
 							type="text"
 						/>
 						{errors.name && (
@@ -178,12 +180,12 @@ export default function CareersPage() {
 
 					<div className="border-b-2 border-black mb-6">
 						<label className="font-mono text-[10px] font-bold uppercase tracking-widest text-gray-500">
-							Email
+							{t("emailLabel")}
 						</label>
 						<input
 							name="email"
 							className="brutal-input"
-							placeholder="COMMS@PROTOCOL.NET"
+							placeholder={t("emailPlaceholder")}
 							type="email"
 						/>
 						{errors.email && (
@@ -193,17 +195,17 @@ export default function CareersPage() {
 
 					<div className="mb-8">
 						<label className="font-mono text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-4 block">
-							Discipline
+							{t("disciplineLabel")}
 						</label>
 						<div className="grid grid-cols-2 gap-3">
-							{disciplines.map((d) => (
+							{disciplineKeys.map((d) => (
 								<button
 									key={d}
 									type="button"
 									className={`discipline-tag text-center ${activeDiscipline === d ? "active" : ""}`}
 									onClick={() => setActiveDiscipline(d)}
 								>
-									{d}
+									{t(d)}
 								</button>
 							))}
 						</div>
@@ -211,12 +213,12 @@ export default function CareersPage() {
 
 					<div className="border-b-2 border-black mb-6">
 						<label className="font-mono text-[10px] font-bold uppercase tracking-widest text-gray-500">
-							Portfolio Link
+							{t("portfolioLabel")}
 						</label>
 						<input
 							name="portfolioLink"
 							className="brutal-input"
-							placeholder="HTTPS://SURFACE.INDEX"
+							placeholder={t("portfolioPlaceholder")}
 							type="url"
 						/>
 						{errors.portfolioLink && (
@@ -226,7 +228,7 @@ export default function CareersPage() {
 
 					<div className="mb-12">
 						<label className="font-mono text-[10px] font-bold uppercase tracking-widest text-gray-500">
-							File Attachment
+							{t("fileLabel")}
 						</label>
 						<div
 							className="drop-zone bg-white/50 cursor-pointer"
@@ -252,11 +254,11 @@ export default function CareersPage() {
 								</div>
 							) : (
 								<p className="font-bold uppercase text-xs tracking-tighter">
-									Drop CV / Portfolio PDF
+									{t("dropText")}
 								</p>
 							)}
 							<p className="text-[9px] font-mono mt-2 text-gray-400">
-								MAX_SIZE: 25MB
+								{t("maxSize")}
 							</p>
 						</div>
 						<input
@@ -280,7 +282,7 @@ export default function CareersPage() {
 						disabled={status === "sending"}
 					>
 						<span className="text-2xl font-black uppercase tracking-tighter">
-							{status === "sending" ? "Transmitting..." : "Transmit Application"}
+							{status === "sending" ? t("submitting") : t("submitButton")}
 						</span>
 						<span className="material-icons text-3xl group-hover:translate-x-2 transition-transform">
 							{status === "sending" ? "sync" : "arrow_forward"}
@@ -295,8 +297,7 @@ export default function CareersPage() {
 						</div>
 						<div>
 							<p className="font-mono text-[9px] leading-tight text-gray-500 uppercase">
-								Encrypted transmission protocol active. By transmitting,
-								you agree to our data processing architecture.
+								{t("securityNote")}
 							</p>
 						</div>
 					</div>
@@ -307,12 +308,12 @@ export default function CareersPage() {
 				<div className="flex justify-between items-end pointer-events-auto">
 					<div className="bg-black text-white border-4 border-black p-3 flex flex-col gap-1">
 						<span className="text-[9px] uppercase font-black text-gray-500 tracking-tighter">
-							Status
+							{t("statusLabel")}
 						</span>
 						<div className="flex items-center gap-2">
 							<div className="w-2 h-2 bg-primary animate-pulse rounded-full" />
 							<span className="text-[10px] font-black uppercase">
-								Awaiting Uplink
+								{t("statusText")}
 							</span>
 						</div>
 					</div>
