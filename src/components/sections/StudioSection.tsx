@@ -73,23 +73,23 @@ export default function StudioSection() {
 			</div>
 
 			<div className="grid grid-cols-3 mt-12 brutal-border-all">
-				<div className="p-6 text-center border-r-[3px] border-black">
-					<span className="text-4xl md:text-5xl font-black block">3+</span>
-					<span className="text-[10px] uppercase tracking-widest opacity-50 font-bold">
+				<div className="px-2 py-5 md:p-6 text-center border-r-[3px] border-black">
+					<span className="text-3xl md:text-5xl font-black block">3+</span>
+					<span className="text-[8px] md:text-[10px] uppercase tracking-widest opacity-50 font-bold">
 						{t("partners")}
 					</span>
 				</div>
-				<div className="p-6 text-center border-r-[3px] border-black">
-					<span className="text-4xl md:text-5xl font-black block">100%</span>
-					<span className="text-[10px] uppercase tracking-widest opacity-50 font-bold">
+				<div className="px-2 py-5 md:p-6 text-center border-r-[3px] border-black">
+					<span className="text-3xl md:text-5xl font-black block">100%</span>
+					<span className="text-[8px] md:text-[10px] uppercase tracking-widest opacity-50 font-bold">
 						{t("satisfaction")}
 					</span>
 				</div>
-				<div className="p-6 text-center">
-					<span className="text-4xl md:text-5xl font-black text-primary block">
+				<div className="px-2 py-5 md:p-6 text-center">
+					<span className="text-3xl md:text-5xl font-black text-primary block">
 						24/7
 					</span>
-					<span className="text-[10px] uppercase tracking-widest opacity-50 font-bold">
+					<span className="text-[8px] md:text-[10px] uppercase tracking-widest opacity-50 font-bold">
 						{t("support")}
 					</span>
 				</div>

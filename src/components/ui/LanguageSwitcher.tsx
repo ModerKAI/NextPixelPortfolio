@@ -1,15 +1,9 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { useState, useRef, useEffect } from "react";
-
-const localeFlags: Record<string, string> = {
-	en: "🇬🇧",
-	de: "🇩🇪",
-	sl: "🇸🇮",
-};
 
 const localeLabels: Record<string, string> = {
 	en: "EN",
@@ -20,7 +14,6 @@ const localeLabels: Record<string, string> = {
 export default function LanguageSwitcher() {
 	const locale = useLocale();
 	const pathname = usePathname();
-	const router = useRouter();
 	const [open, setOpen] = useState(false);
 	const ref = useRef<HTMLDivElement>(null);
 
@@ -35,19 +28,18 @@ export default function LanguageSwitcher() {
 	}, []);
 
 	const switchLocale = (newLocale: string) => {
-		router.replace(pathname, { locale: newLocale });
 		setOpen(false);
+		window.location.assign(`/${newLocale}${pathname}`);
 	};
 
 	return (
 		<div ref={ref} className="relative">
 			<button
 				onClick={() => setOpen(!open)}
-				className="flex items-center gap-1.5 border-2 border-black px-2 py-1 bg-white font-bold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-colors"
+				className="border-2 border-black px-2 py-1 bg-white font-bold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-colors"
 				aria-label="Change language"
 			>
-				<span className="text-sm leading-none">{localeFlags[locale]}</span>
-				<span>{localeLabels[locale]}</span>
+				{localeLabels[locale]}
 			</button>
 
 			{open && (
@@ -58,10 +50,9 @@ export default function LanguageSwitcher() {
 							<button
 								key={l}
 								onClick={() => switchLocale(l)}
-								className="flex items-center gap-1.5 w-full px-2 py-1.5 font-bold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-colors"
+								className="w-full px-2 py-1.5 font-bold text-xs uppercase tracking-wider hover:bg-black hover:text-white transition-colors"
 							>
-								<span className="text-sm leading-none">{localeFlags[l]}</span>
-								<span>{localeLabels[l]}</span>
+								{localeLabels[l]}
 							</button>
 						))}
 				</div>

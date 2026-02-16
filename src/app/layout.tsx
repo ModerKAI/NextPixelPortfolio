@@ -45,6 +45,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
+				suppressHydrationWarning
 				className={`${spaceGrotesk.variable} ${barlowCondensed.variable} font-display bg-background-light text-black overflow-x-hidden antialiased`}
 			>
 				<GrainOverlay />
